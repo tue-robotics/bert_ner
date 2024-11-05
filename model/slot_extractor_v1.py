@@ -21,7 +21,7 @@ import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
 # Load pre-trained BERT tokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
 # try githubs approach: https://github.com/m2dsupsdlclass/lectures-labs/blob/master/labs/06_deep_nlp/Transformers_Joint_Intent_Classification_Slot_Filling_rendered.ipynb
 # https://github.com/monologg/JointBERT/blob/master/data_loader.py
@@ -202,28 +202,51 @@ print(slot_train)
 input_ids_train = torch.tensor(encoded_train["input_ids"])
 attention_masks_train = torch.tensor(encoded_train["attention_masks"])
 slot_labels_train = torch.tensor(slot_train)
+# Use the same process for validation and test datasets
+input_ids_valid = torch.tensor(encoded_valid["input_ids"])
+attention_masks_valid = torch.tensor(encoded_valid["attention_masks"])
+slot_labels_valid = torch.tensor(slot_valid)
 print("########################################### input_ids_train:")
 print(input_ids_train)
 print("########################################### attention_masks_train:")
 print(attention_masks_train)
 print("########################################### slot_labels_train:")
 print(slot_labels_train)
+
+
+def batch_data(input_ids, attention_masks, labels, batch_size):
+    """
+    This function creates a TensorDataset and DataLoader from input tensors.
+
+    Args:
+    - input_ids (torch.Tensor): Token IDs tensor.
+    - attention_masks (torch.Tensor): Attention masks tensor.
+    - labels (torch.Tensor): Slot labels tensor.
+    - batch_size (int): Batch size.
+
+    Returns:
+    - DataLoader: DataLoader with padded and batched data.
+    """
+    # Create TensorDataset
+    dataset = TensorDataset(input_ids, attention_masks, labels)
+
+    # Initialize DataLoader with batch size and other configurations
+    dataloader = DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=True,  # Shuffle for training
+        drop_last=False,  # Ensure no data is dropped
+    )
+
+    return dataloader
+
+
 # Create TensorDataset
-train_dataset = TensorDataset(
-    input_ids_train, attention_masks_train, slot_labels_train)
-
-# Use the same process for validation and test datasets
-input_ids_valid = torch.tensor(encoded_valid["input_ids"])
-attention_masks_valid = torch.tensor(encoded_valid["attention_masks"])
-slot_labels_valid = torch.tensor(slot_valid)
-
-val_dataset = TensorDataset(
-    input_ids_valid, attention_masks_valid, slot_labels_valid)
-
-# Define DataLoaders
-train_dataloader = DataLoader(
-    dataset=train_dataset, batch_size=1, shuffle=True)
-val_loader = DataLoader(dataset=val_dataset, shuffle=False, batch_size=1)
+# Use the function to create DataLoaders
+train_dataloader = batch_data(
+    input_ids_train, attention_masks_train, slot_labels_train, batch_size=32)
+val_dataloader = batch_data(
+    input_ids_valid, attention_masks_valid, slot_labels_valid, batch_size=32)
 
 
 class JointIntentAndSlotFillingModel(nn.Module):
@@ -242,10 +265,10 @@ class JointIntentAndSlotFillingModel(nn.Module):
     def forward(self, input_ids, attention_mask=None, token_type_ids=None):
         # Get BERT outputs (sequence and pooled)
         # In the forward method:
-        print("########################################### Forward_pass:")
-        print("FORWARD input_ids:", input_ids.shape)
-        print("FORWARD attention_mask:", attention_mask.shape)
-        print("FORWARD Max token ID:", torch.max(input_ids))
+        # print("########################################### Forward_pass:")
+        # print("FORWARD input_ids:", input_ids.shape)
+        # print("FORWARD attention_mask:", attention_mask.shape)
+        # print("FORWARD Max token ID:", torch.max(input_ids))
 
         outputs = self.bert(
             input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
@@ -264,7 +287,7 @@ class JointIntentAndSlotFillingModel(nn.Module):
 
 
 # Define model and optimizer
-config = BertConfig.from_pretrained("bert-base-uncased")
+config = BertConfig.from_pretrained("bert-base-cased")
 config.return_dict = False
 model = JointIntentAndSlotFillingModel(slot_num_labels=len(slot_map))
 optimizer = AdamW(model.parameters(), lr=3e-5)
@@ -318,46 +341,46 @@ for epoch in range(2):  # Set the number of epochs
 
         # Check if any token IDs exceed the tokenizer's vocabulary size
         max_vocab_index = tokenizer.vocab_size
-        assert (input_ids < max_vocab_index).all(
-        ), "One or more token IDs exceed the tokenizer's vocabulary size."
+        # assert (input_ids < max_vocab_index).all(
+        # ), "One or more token IDs exceed the tokenizer's vocabulary size."
 
         # Ensure slot_labels are of type torch.long and check their validity
-        assert (slot_labels < len(slot_map)).all(
-        ), "Slot labels contain values exceeding slot_map range"
+        # assert (slot_labels < len(slot_map)).all(
+        # ), "Slot labels contain values exceeding slot_map range"
 
         # Debugging check for input_ids range
-        if torch.max(input_ids) >= tokenizer.vocab_size:
-            print("Found token ID out of range for input:", input_ids)
-            input_ids = torch.clamp(input_ids, max=tokenizer.vocab_size - 1)
+        # if torch.max(input_ids) >= tokenizer.vocab_size:
+        # print("Found token ID out of range for input:", input_ids)
+        # input_ids = torch.clamp(input_ids, max=tokenizer.vocab_size - 1)
         # try:
         # Forward pass
         # Check for any values outside the expected range
-        print("Max token ID:", torch.max(input_ids).item(),
-              "Expected max:", tokenizer.vocab_size - 1)
+        # print("Max token ID:", torch.max(input_ids).item(),
+        # "Expected max:", tokenizer.vocab_size - 1)
+
         slot_logits = model(input_ids, attention_mask=attention_mask)
-        print("Slot logits shape:", slot_logits.shape)  # Debugging output
-        print("Embedding layer shape:",
-              model.bert.embeddings.word_embeddings.weight.shape)
-        vocab_size = tokenizer.vocab_size
-        print(f"Tokenizer vocabulary size: {vocab_size}")
+
+        # print("Input IDs:", input_ids)
+        # print("Slot logits:", slot_logits)
+        # print("Slot labels:", slot_labels)
+        # print("Slot logits shape:", slot_logits.shape)  # Debugging output
+        # print("Embedding layer shape:",
+        # model.bert.embeddings.word_embeddings.weight.shape)
+        # vocab_size = tokenizer.vocab_size
+        # print(f"Tokenizer vocabulary size: {vocab_size}")
         # Get the vocabulary size from the BERT model's configuration
         vocab_size1 = model.bert.config.vocab_size
-        print(f"Model vocabulary size: {vocab_size1}")
+        # print(f"Model vocabulary size: {vocab_size1}")
         # Compute losses
         slot_loss = slot_loss_fn(
             slot_logits.view(-1,
                              slot_logits.shape[-1]), slot_labels.view(-1)
         )
         loss = slot_loss
-        # except Exception as e:
-        # print("Error during forward pass and loss calculation:", e)
-        # print("Input IDs:", input_ids)
-        # print("Slot logits:", slot_logits)
-        # print("Slot labels:", slot_labels)
 
         # Backpropagation
         optimizer.zero_grad()
-        loss.backward(retain_graph=True)
+        loss.backward()
         optimizer.step()
 
         total_loss += loss.item()
