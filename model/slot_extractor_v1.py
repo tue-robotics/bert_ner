@@ -149,6 +149,7 @@ def encode_dataset(tokenizer, text_sequences, max_length):
         padding='max_length',
         truncation=True,
         return_tensors="pt"
+        # TODO: return_offsets_mapping=True  # Add this line since it helps track token positions relative to the original words
     )
     return {"input_ids": inputs["input_ids"], "attention_masks": inputs["attention_mask"]}
 
@@ -170,6 +171,14 @@ print("########################################### slot_map:")
 print(slot_map)
 
 # Create slots for each word in the text
+"""
+TODO: Implement the encode_token_labels function to mark subsequent subwords with a different placeholder (e.g., X).
+for word, word_label in zip(text_sequence.split(), word_labels.split()):
+    tokens = tokenizer.tokenize(word)
+    encoded_labels.append(slot_map[word_label])  # First subword with correct label
+    # Use 'X' or another placeholder for subsequent subwords
+    encoded_labels.extend([slot_map.get('X', 0)] * (len(tokens) - 1))
+"""
 
 
 def encode_token_labels(text_sequences, slot_names, tokenizer, slot_map,
@@ -291,7 +300,11 @@ config = BertConfig.from_pretrained("bert-base-cased")
 config.return_dict = False
 model = JointIntentAndSlotFillingModel(slot_num_labels=len(slot_map))
 optimizer = AdamW(model.parameters(), lr=3e-5)
+
 # Define loss functions for slot and intent
+# TODO Set ignore_index in CrossEntropyLoss to the [PAD] index to avoid penalizing padding in the loss calculation.
+# pad_token_label_id = slot_map["[PAD]"]
+# slot_loss_fn = nn.CrossEntropyLoss(ignore_index=pad_token_label_id)
 slot_loss_fn = nn.CrossEntropyLoss()
 # intent_loss_fn = nn.CrossEntropyLoss()
 
@@ -321,6 +334,7 @@ except Exception as e:
 # print(model)
 # Training loop
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"we still have :D {device}")
 model.to(device)
 
 for epoch in range(2):  # Set the number of epochs
@@ -359,7 +373,7 @@ for epoch in range(2):  # Set the number of epochs
         # "Expected max:", tokenizer.vocab_size - 1)
 
         slot_logits = model(input_ids, attention_mask=attention_mask)
-
+        print("########################################### Forward_pass:")
         # print("Input IDs:", input_ids)
         # print("Slot logits:", slot_logits)
         # print("Slot labels:", slot_labels)
