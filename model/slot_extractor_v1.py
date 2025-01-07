@@ -25,6 +25,7 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
 # try githubs approach: https://github.com/m2dsupsdlclass/lectures-labs/blob/master/labs/06_deep_nlp/Transformers_Joint_Intent_Classification_Slot_Filling_rendered.ipynb
 # https://github.com/monologg/JointBERT/blob/master/data_loader.py
+"""
 SNIPS_DATA_BASE_URL = (
     "https://github.com/ogrisel/slot_filling_and_intent_detection_of_SLU/blob/"
     "master/data/snips/"
@@ -34,7 +35,7 @@ for filename in ["train", "valid", "test", "vocab.intent", "vocab.slot"]:
     if not path.exists():
         print(f"Downloading {filename}...")
         urlretrieve(SNIPS_DATA_BASE_URL + filename + "?raw=true", path)
-
+"""
 lines_train = Path("train").read_text("utf-8").strip().splitlines()
 print("########################################### lines_train:")
 print(lines_train[:5])
@@ -400,3 +401,5 @@ for epoch in range(2):  # Set the number of epochs
         total_loss += loss.item()
 
     print(f"Epoch {epoch + 1}/{2}, Loss: {total_loss / len(train_dataloader)}")
+
+torch.save(model.state_dict(), "model.pth")
