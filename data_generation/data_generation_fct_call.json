@@ -1,0 +1,66 @@
+{
+  "name": "dataset_generator",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "dataset": {
+        "type": "array",
+        "description": "A synthetic dataset for training a robot in basic home assistance tasks, specifically for MoveObject and GrabObject actions.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sentence": {
+              "type": "string",
+              "description": "A command sentence given to the robot."
+            },
+            "annotations": {
+              "type": "array",
+              "description": "CONLL03 style annotations for the sentence.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "description": "A word or punctuation mark from the sentence."
+                  },
+                  "label": {
+                    "type": "string",
+                    "description": "The entity label for the token. Follows the BIO scheme tagging scheme.",
+                    "enum": [
+                      "B-Action", "I-Action", "B-Object",
+                      "I-Object", "B-StartLocation", "I-StartLocation",
+                      "B-EndLocation", "I-EndLocation", "O"]
+                  }
+                },
+                "required": [
+                  "token",
+                  "label"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "action": {
+              "type": "string",
+              "description": "The general action that the bot needs to undertake, either MoveObject or GrabObject.",
+              "enum": [
+                "MoveObject",
+                "GrabObject"
+              ]
+            }
+          },
+          "required": [
+            "sentence",
+            "annotations",
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "dataset"
+    ],
+    "additionalProperties": false
+  },
+  "strict": true
+}
