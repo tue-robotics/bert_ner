@@ -1,0 +1,8314 @@
+{
+  "dataset": [
+    {
+      "sentence": "Please , could you relocate promptly the book from the table to the shelf .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "relocate",
+          "label": "B-Action"
+        },
+        {
+          "token": "promptly",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I need you to swiftly move the vase from the counter to the cabinet .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "move",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Kindly , please transfer carefully the lamp from the desk to the drawer .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "transfer",
+          "label": "B-Action"
+        },
+        {
+          "token": "carefully",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Would you mind gently shifting the cup from the kitchen to the dining table ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "shifting",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "At your earliest convenience , please maneuver efficiently the remote from the living room to the office .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "earliest",
+          "label": "O"
+        },
+        {
+          "token": "convenience",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "maneuver",
+          "label": "B-Action"
+        },
+        {
+          "token": "efficiently",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I require you to quickly transport the newspaper from the bedside to the coffee table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "transport",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Your task is to securely carry the bottle from the kitchen counter to the cabinet .",
+      "annotations": [
+        {
+          "token": "Your",
+          "label": "O"
+        },
+        {
+          "token": "task",
+          "label": "O"
+        },
+        {
+          "token": "is",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "securely",
+          "label": "B-Action"
+        },
+        {
+          "token": "carry",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Please ensure you properly move the cushion from the lounge to the closet .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "ensure",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "properly",
+          "label": "B-Action"
+        },
+        {
+          "token": "move",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Help me to cautiously shift the clock from the office desk to the drawer .",
+      "annotations": [
+        {
+          "token": "Help",
+          "label": "O"
+        },
+        {
+          "token": "me",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "cautiously",
+          "label": "B-Action"
+        },
+        {
+          "token": "shift",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I would appreciate it if you kindly reposition the laptop from the table to the shelf .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "it",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "reposition",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Could you please very promptly transfer the picture from the counter to the cabinet ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "very",
+          "label": "B-Action"
+        },
+        {
+          "token": "promptly",
+          "label": "I-Action"
+        },
+        {
+          "token": "transfer",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "When possible , please accelerate moving the plate from the dining table to the cupboard .",
+      "annotations": [
+        {
+          "token": "When",
+          "label": "O"
+        },
+        {
+          "token": "possible",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "accelerate",
+          "label": "B-Action"
+        },
+        {
+          "token": "moving",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "It is important that you swiftly shift the chair from the living room to the drawer .",
+      "annotations": [
+        {
+          "token": "It",
+          "label": "O"
+        },
+        {
+          "token": "is",
+          "label": "O"
+        },
+        {
+          "token": "important",
+          "label": "O"
+        },
+        {
+          "token": "that",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "shift",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Kindly, please carefully transfer the toy from the porch to the basement .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "carefully",
+          "label": "B-Action"
+        },
+        {
+          "token": "transfer",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "basement",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "At once , reassign swiftly the magazine from the office to the closet .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "once",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "reassign",
+          "label": "B-Action"
+        },
+        {
+          "token": "swiftly",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Oblige me by promptly moving the pen from the drawer to the desk .",
+      "annotations": [
+        {
+          "token": "Oblige",
+          "label": "O"
+        },
+        {
+          "token": "me",
+          "label": "O"
+        },
+        {
+          "token": "by",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "moving",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I ask you to efficiently transfer the wallet from the counter to the coffee table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "efficiently",
+          "label": "B-Action"
+        },
+        {
+          "token": "transfer",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Could you possibly gently shift the keychain from the shelf to the cabinet ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "possibly",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "shift",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "At your discretion , please quickly reposition the smartphone from the desk to the drawer .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "discretion",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "reposition",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Would you please promptly transfer the scissors from the table to the shelf ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "transfer",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "At your convenience, kindly shift the book from the counter to the cabinet .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "convenience",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "shift",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I ask you to swiftly move the vase from the kitchen to the cupboard .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "move",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Please take a moment to swiftly move the plate from the dining table to the cupboard .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "take",
+          "label": "O"
+        },
+        {
+          "token": "a",
+          "label": "O"
+        },
+        {
+          "token": "moment",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "move",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "I need you to carefully shift the chair from the bedroom to the closet .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "carefully",
+          "label": "B-Action"
+        },
+        {
+          "token": "shift",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedroom",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Let us have you quickly reposition the toy from the porch to the basement .",
+      "annotations": [
+        {
+          "token": "Let",
+          "label": "O"
+        },
+        {
+          "token": "us",
+          "label": "O"
+        },
+        {
+          "token": "have",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "reposition",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "basement",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "MoveObject"
+    },
+    {
+      "sentence": "Could you please quickly pick up the book from the table ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , make sure to grab firmly the vase from the counter .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "make",
+          "label": "O"
+        },
+        {
+          "token": "sure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "grab",
+          "label": "B-Action"
+        },
+        {
+          "token": "firmly",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I need you to swiftly pick up the lamp from the desk .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly , could you gently seize the cup from the kitchen ?",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you mind quickly fetching the remote from the living room ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "fetching",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I would appreciate if you could promptly grab the newspaper from the bedside .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please quickly pick up the bottle from the kitchen counter .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Can you kindly seize the cushion from the lounge ?",
+      "annotations": [
+        {
+          "token": "Can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "At once , please rapidly grab the clock from the office desk .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "once",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I require you to swiftly pick up the laptop from the table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you please gently retrieve the picture from the counter ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "retrieve",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , quickly seize the plate from the dining table .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly , could you promptly pick up the chair from the living room ?",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask you to carefully grab the toy from the porch .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "carefully",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please make sure to swiftly seize the magazine from the office .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "make",
+          "label": "O"
+        },
+        {
+          "token": "sure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you quickly pick up the pen from the drawer ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly , retrieve promptly the wallet from the counter .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "retrieve",
+          "label": "B-Action"
+        },
+        {
+          "token": "promptly",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I would like you to gently grab the keychain from the shelf .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "like",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , can you quickly pick up the smartphone from the desk ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you mind promptly seize the scissors from the table ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I need you to firmly grab the book from the counter .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "firmly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "At your earliest, swiftly pick up the vase from the kitchen .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "earliest",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , make sure to gently retrieve the lamp from the desk .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "make",
+          "label": "O"
+        },
+        {
+          "token": "sure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "retrieve",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you quickly seize the cup from the kitchen counter ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask that you promptly pick up the remote from the living room .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "that",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly, would you quickly grab the newspaper from the bedside ?",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I require you to swiftly pick up the bottle from the kitchen counter .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , can you gently seize the cushion from the lounge ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you mind rapidly pick up the clock from the office desk ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I need you to quickly retrieve the laptop from the table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "retrieve",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you kindly grab the picture from the counter ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please promptly pick up the plate from the dining table .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask you to quickly seize the chair from the living room .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly, immediately pick up the toy from the porch .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "immediately",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you please firmly grab the magazine from the office ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "firmly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , make sure to quickly pick up the pen from the drawer .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "make",
+          "label": "O"
+        },
+        {
+          "token": "sure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I would appreciate if you gently seize the wallet from the counter .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you promptly grab the keychain from the shelf ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I need you to swiftly pick up the smartphone from the desk .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please quickly seize the scissors from the table .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "At your earliest convenience, quickly pick up the book from the counter .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "earliest",
+          "label": "O"
+        },
+        {
+          "token": "convenience",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you kindly retrieve the vase from the kitchen ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "retrieve",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask you to rapidly grab the lamp from the desk .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , can you swiftly grab the cup from the kitchen counter ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I require you to promptly seize the remote from the living room .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you quickly pick up the newspaper from the bedside ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please kindly retrieve the bottle from the kitchen counter .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "retrieve",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I need you to rapidly grab the cushion from the lounge .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you mind swiftly pick up the clock from the office desk ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask that you quickly pick up the laptop from the table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "that",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , can you gently seize the picture from the counter ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "gently",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you please promptly pick up the plate from the dining table ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I require you to swiftly grab the chair from the living room .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Kindly, quickly pick up the toy from the porch .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I would appreciate if you rapidly seize the magazine from the office .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please , make sure to swiftly pick up the pen from the drawer .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "make",
+          "label": "O"
+        },
+        {
+          "token": "sure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Could you kindly pick up the wallet from the counter ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "I ask you to rapidly grab the keychain from the shelf .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "grab",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please quickly pick up the smartphone from the desk .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "pick",
+          "label": "I-Action"
+        },
+        {
+          "token": "up",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Would you mind softly seize the scissors from the table ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "softly",
+          "label": "B-Action"
+        },
+        {
+          "token": "seize",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "GrabObject"
+    },
+    {
+      "sentence": "Please, could you immediately bring the book from the table to the living room ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "immediately",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I need you to quickly bring the vase from the kitchen to the dining table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Would you kindly bring the lamp from the desk to the office ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please bring over the cup from the counter to the shelf .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "bring",
+          "label": "B-Action"
+        },
+        {
+          "token": "over",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "At once, please swiftly bring the remote from the living room to the kitchen counter .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "once",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I would appreciate if you could promptly bring the newspaper from the bedside to the coffee table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Kindly, bring the bottle from the garage to the cabinet .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "garage",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, at your earliest, bring the cushion from the lounge to the closet .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "at",
+          "label": "B-Action"
+        },
+        {
+          "token": "your",
+          "label": "I-Action"
+        },
+        {
+          "token": "earliest",
+          "label": "I-Action"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I ask you to quickly bring the clock from the office desk to the drawer .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Would you please bring the laptop from the table to the shelf ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Could you kindly bring the picture from the counter to the cabinet ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "At your convenience, please quickly bring the plate from the dining table to the cupboard .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "convenience",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I would like you to swiftly bring the chair from the living room to the drawer .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "like",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please promptly bring the toy from the porch to the basement .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "basement",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Kindly, I request you to carefully bring the magazine from the office to the closet .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "request",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "carefully",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Would you mind quickly bringing the pen from the drawer to the desk ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "mind",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bringing",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I need you to promptly bring the wallet from the counter to the coffee table .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Could you please kindly bring the keychain from the shelf to the cabinet ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "B-Action"
+        },
+        {
+          "token": "kindly",
+          "label": "I-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "At once, quickly bring the smartphone from the desk to the drawer .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "once",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Would you rapidly bring the scissors from the table to the shelf ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, could you immediately bring the book from the counter to the dining table ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "immediately",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "book",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I would like you to quickly bring the vase from the kitchen to the cabinet .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "like",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "vase",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Kindly bring the lamp from the desk to the drawer .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lamp",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, at your earliest, bring the cup from the kitchen counter to the shelf .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "at",
+          "label": "B-Action"
+        },
+        {
+          "token": "your",
+          "label": "I-Action"
+        },
+        {
+          "token": "earliest",
+          "label": "I-Action"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cup",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "counter",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I ask you to swiftly bring the remote from the living room to the office .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "remote",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Would you please promptly bring the newspaper from the bedside to the coffee table ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "newspaper",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedside",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Kindly bring the bottle from the garage to the cupboard .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bottle",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "garage",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please quickly bring the cushion from the lounge to the closet .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cushion",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "lounge",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "May you swiftly bring the clock from the office desk to the drawer ?",
+      "annotations": [
+        {
+          "token": "May",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "clock",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "desk",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I require you to promptly bring the laptop from the table to the shelf .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "laptop",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Could you kindly bring the picture from the counter to the cabinet ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "picture",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "At your convenience, please quickly bring the plate from the dining table to the cupboard .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "convenience",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "plate",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cupboard",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I would appreciate if you swiftly bring the chair from the bedroom to the closet .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "appreciate",
+          "label": "O"
+        },
+        {
+          "token": "if",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "chair",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedroom",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "closet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Kindly, quickly bring the toy from the porch to the basement .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "toy",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "porch",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "basement",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, would you promptly bring the magazine from the office to the drawer ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "magazine",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I request you to rapidly bring the pen from the drawer to the desk .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "request",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "rapidly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "pen",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Could you please quickly bring the wallet from the counter to the coffee table ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "wallet",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "counter",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "coffee",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": "table",
+          "label": "I-EndLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "At once, kindly bring the keychain from the shelf to the cabinet .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "once",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "keychain",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "cabinet",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "I need you to swiftly bring the smartphone from the desk to the drawer .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "smartphone",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "desk",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "drawer",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, promptly bring the scissors from the table to the shelf .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "bring",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "scissors",
+          "label": "B-Object"
+        },
+        {
+          "token": "from",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "table",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "shelf",
+          "label": "B-EndLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "BringObject"
+    },
+    {
+      "sentence": "Please, can you quickly find the person John in the living room ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "John",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Immediately locate the person Alice in the kitchen .",
+      "annotations": [
+        {
+          "token": "Immediately",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Alice",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "I need you to swiftly locate the individual Bob in the office .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "individual",
+          "label": "O"
+        },
+        {
+          "token": "Bob",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Please promptly find the person Charlie in the garden .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Charlie",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "garden",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Would you kindly locate the person Diana in the hallway ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Diana",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "hallway",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "I require you to quickly find the person Edward in the kitchen .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "require",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Edward",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Please, can you swiftly locate the person Fiona in the living room ?",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "can",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Fiona",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Kindly ensure to promptly find the person George in the office .",
+      "annotations": [
+        {
+          "token": "Kindly",
+          "label": "O"
+        },
+        {
+          "token": "ensure",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "George",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Would you please immediately locate the person Hannah in the dining room ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "immediately",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Hannah",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "dining",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "I ask you to quickly find the person Ian in the bedroom .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "ask",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "quickly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Ian",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "bedroom",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Please kindly locate the person Julia in the kitchen .",
+      "annotations": [
+        {
+          "token": "Please",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Julia",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "kitchen",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Could you swiftly find the person Kevin in the office ?",
+      "annotations": [
+        {
+          "token": "Could",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "swiftly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Kevin",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "office",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "?",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "At your earliest, please locate immediately the person Laura in the garden .",
+      "annotations": [
+        {
+          "token": "At",
+          "label": "O"
+        },
+        {
+          "token": "your",
+          "label": "O"
+        },
+        {
+          "token": "earliest",
+          "label": "O"
+        },
+        {
+          "token": ",",
+          "label": "O"
+        },
+        {
+          "token": "please",
+          "label": "O"
+        },
+        {
+          "token": "locate",
+          "label": "B-Action"
+        },
+        {
+          "token": "immediately",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Laura",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "garden",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "I need you to promptly find the person Michael in the living room .",
+      "annotations": [
+        {
+          "token": "I",
+          "label": "O"
+        },
+        {
+          "token": "need",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "to",
+          "label": "O"
+        },
+        {
+          "token": "promptly",
+          "label": "B-Action"
+        },
+        {
+          "token": "find",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Michael",
+          "label": "B-Person"
+        },
+        {
+          "token": "in",
+          "label": "O"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "living",
+          "label": "B-StartLocation"
+        },
+        {
+          "token": "room",
+          "label": "I-StartLocation"
+        },
+        {
+          "token": ".",
+          "label": "O"
+        }
+      ],
+      "action": "LocateObject"
+    },
+    {
+      "sentence": "Would you kindly locate the person Nina in the office ?",
+      "annotations": [
+        {
+          "token": "Would",
+          "label": "O"
+        },
+        {
+          "token": "you",
+          "label": "O"
+        },
+        {
+          "token": "kindly",
+          "label": "B-Action"
+        },
+        {
+          "token": "locate",
+          "label": "I-Action"
+        },
+        {
+          "token": "the",
+          "label": "O"
+        },
+        {
+          "token": "person",
+          "label": "O"
+        },
+        {
+          "token": "Nina"
+        }
+      ]
+    }
+  ]
+}

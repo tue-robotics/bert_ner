@@ -5,7 +5,7 @@
     "properties": {
       "dataset": {
         "type": "array",
-        "description": "A synthetic dataset for training a robot in basic home assistance tasks, specifically for MoveObject and GrabObject actions.",
+        "description": "A synthetic dataset for training a robot in basic home assistance tasks, specifically for MoveObject, GrabObject, LocateObject, BringObject, LocatePerson actions.",
         "items": {
           "type": "object",
           "properties": {
@@ -29,7 +29,7 @@
                     "enum": [
                       "B-Action", "I-Action", "B-Object",
                       "I-Object", "B-StartLocation", "I-StartLocation",
-                      "B-EndLocation", "I-EndLocation", "O"]
+                      "B-EndLocation", "I-EndLocation", "B-Person", "I-Person","O"]
                   }
                 },
                 "required": [
@@ -41,10 +41,13 @@
             },
             "action": {
               "type": "string",
-              "description": "The general action that the bot needs to undertake, either MoveObject or GrabObject.",
+              "description": "The general action that the bot needs to undertake, either MoveObject, GrabObject. LocateObject",
               "enum": [
                 "MoveObject",
-                "GrabObject"
+                "GrabObject",
+                "LocateObject",
+                "LocaatePerson",
+                "BringObject"
               ]
             }
           },
