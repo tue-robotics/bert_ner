@@ -1,0 +1,97 @@
+{
+  "name": "dataset_generator",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "dataset": {
+        "type": "array",
+        "description": "A synthetic dataset for training a robot in basic home assistance tasks.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sentence": {
+              "type": "string",
+              "description": "A command sentence given to the robot."
+            },
+            "annotations": {
+              "type": "array",
+              "description": "CONLL03 style annotations for the sentence.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string",
+                    "description": "A word or punctuation mark from the sentence."
+                  },
+                  "label": {
+                    "type": "string",
+                    "description": "The entity label for the token. Follows the BIO scheme tagging scheme.",
+                    "enum": [
+                      "B-Action-navigate-to", "I-Action-navigate-to",
+                      "B-Action-find", "I-Action-find",
+                      "B-Action-pick-up", "I-Action-pick-up",
+                      "B-Action-place", "I-Action-place",
+                      "B-Action-hand-over", "I-Action-hand-over",
+                      "B-Action-say", "I-Action-say",
+                      "B-Action-look-at", "I-Action-look-at",
+                      "B-Action-point-target", "I-Action-point-target",
+                      "B-Action-tell-name-of-person", "I-Action-tell-name-of-person",
+                      "B-Action-turn-toward-sound", "I-Action-turn-toward-sound",
+                      "B-Action-count-and-tell", "I-Action-count-and-tell",
+                      "B-Action-answer-question", "I-Action-answer-question",
+                      "B-Action-follow", "I-Action-follow",
+                      "B-Action-guide", "I-Action-guide",
+                      "B-Object", "I-Object", 
+                      "B-Location", "I-Location", 
+                      "B-Area", "I-Area",
+                      "B-Person", "I-Person",
+                      "B-SourceLocation", "I-SourceLocation",
+                      "B-TargetLocation", "I-TargetLocation",
+                      "O"
+                    ]
+                  }
+                },
+                "required": [
+                  "token",
+                  "label"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "action": {
+              "type": "string",
+              "description": "The action that the robot needs to undertake, based on the action server's available actions",
+              "enum": [
+                "navigate-to",
+                "find",
+                "pick-up",
+                "place",
+                "hand-over",
+                "say",
+                "look-at",
+                "point-target",
+                "tell-name-of-person",
+                "turn-toward-sound",
+                "count-and-tell",
+                "answer-question",
+                "follow",
+                "guide"
+              ]
+            }
+          },
+          "required": [
+            "sentence",
+            "annotations",
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "dataset"
+    ],
+    "additionalProperties": false
+  },
+  "strict": true
+} 
