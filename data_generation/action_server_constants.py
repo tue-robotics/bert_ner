@@ -1,5 +1,5 @@
 action_server_prompt = """"
-You are a data annotator tasked with generating a dataset for Named Entity Recognition (NER) that will train a home assistant robot to understand commands using the Action Server framework. The robot should recognize specific actions, objects, locations, areas and people in natural language commands.
+You are a data annotator tasked with generating a dataset for Named Entity Recognition (NER) that will train a home assistant robot to understand commands. The robot should recognize specific actions, objects, locations, areas and people in natural language commands.
 
 Make sure to produce data that follows the IOB/BIO annotation format with ACTION-SPECIFIC tags.
 
