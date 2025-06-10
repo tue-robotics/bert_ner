@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
-import json
 import logging
 import os
 import time
+from datetime import datetime
 from typing import List, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 from openai import AzureOpenAI
 from openai import BadRequestError, APITimeoutError, RateLimitError
@@ -27,6 +29,19 @@ client = AzureOpenAI(
     api_key=os.getenv("azure_key"),
     api_version=os.getenv("AZURE_API_VERSION")
 )
+
+# Thread-local storage for per-thread clients
+thread_local = threading.local()
+
+def get_client():
+    """Get a thread-local Azure OpenAI client"""
+    if not hasattr(thread_local, 'client'):
+        thread_local.client = AzureOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("azure_key"),
+            api_version=os.getenv("AZURE_API_VERSION")
+        )
+    return thread_local.client
 
 class Annotation(BaseModel):
     token: str
@@ -106,67 +121,110 @@ def parse_with_retry(
     logging.error(f"All {max_retries} attempts failed. Unable to parse the dataset.")
     return None
 
-def generate_action_server_data(num_examples: int = 100, batch_size: int = 10, model: str = "gpt-4.1") -> Optional[Dataset]:
+def generate_single_batch(batch_id: int, examples_to_generate: int, model: str) -> Optional[List[DataPoint]]:
     """
-    Generate action server dataset using the OpenAI API.
+    Generate a single batch of data.
+    
+    Args:
+        batch_id: The ID of the batch being generated.
+        examples_to_generate: Number of examples to generate in this batch.
+        model: The model to use for generation.
+        
+    Returns:
+        List of generated DataPoints or None if generation fails.
+    """
+    messages = [
+        {"role": "system", "content": action_server_prompt},
+        {"role": "user", "content": f"Generate {examples_to_generate} diverse examples of robot commands with their BIO annotations."}
+    ]
+    
+    logging.info(f"Worker generating batch {batch_id} with {examples_to_generate} examples")
+    
+    # Use thread-local client
+    thread_client = get_client()
+    
+    result = parse_with_retry(
+        client=thread_client,
+        model=model,
+        messages=messages,
+        response_format=Dataset
+    )
+    
+    if result is None:
+        logging.error(f"Failed to generate batch {batch_id}")
+        return None
+    
+    logging.info(f"Worker completed batch {batch_id} with {len(result.dataset)} examples")
+    return result.dataset
+
+def generate_action_server_data(num_examples: int = 100, batch_size: int = 10, model: str = "gpt-4.1", max_workers: int = 5) -> Optional[Dataset]:
+    """
+    Generate action server dataset using the OpenAI API with parallel processing.
     
     Args:
         num_examples: Total number of examples to generate.
         batch_size: Number of examples to generate in each batch.
         model: The model to use for generation.
+        max_workers: Maximum number of parallel workers.
         
     Returns:
         The generated dataset or None if generation fails.
     """
-    total_examples = 0
     all_data = []
+    num_batches = (num_examples + batch_size - 1) // batch_size
     
-    num_batches = (num_examples + batch_size - 1) // batch_size 
+    logging.info(f"Starting parallel generation with {max_workers} workers for {num_batches} batches")
     
+    # Create batch tasks
+    batch_tasks = []
     for batch in range(num_batches):
-        examples_to_generate = min(batch_size, num_examples - total_examples)
+        examples_to_generate = min(batch_size, num_examples - batch * batch_size)
+        batch_tasks.append((batch + 1, examples_to_generate, model))
+    
+    # Process batches in parallel
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all batch tasks
+        future_to_batch = {
+            executor.submit(generate_single_batch, batch_id, examples, model): batch_id
+            for batch_id, examples, model in batch_tasks
+        }
         
-        messages = [
-            {"role": "system", "content": action_server_prompt},
-            {"role": "user", "content": f"Generate {examples_to_generate} diverse examples of robot commands with their BIO annotations."}
-        ]
-        
-        logging.info(f"Generating batch {batch + 1}/{num_batches} with {examples_to_generate} examples")
-        
-        result = parse_with_retry(
-            client=client,
-            model=model,
-            messages=messages,
-            response_format=Dataset
-        )
-        
-        if result is None:
-            logging.error(f"Failed to generate batch {batch + 1}")
-            continue
-            
-        all_data.extend(result.dataset)
-        total_examples += len(result.dataset)
-        
-        logging.info(f"Generated {len(result.dataset)} examples in batch {batch + 1}. Total: {total_examples}/{num_examples}")
-        
-        interim_dataset = Dataset(dataset=all_data)
-        with open(f"action_server_data_batch_{batch+1}.json", "w") as f:
-            f.write(interim_dataset.model_dump_json(indent=2))
-        
-        if total_examples >= num_examples:
-            break
-            
-        time.sleep(2)
+        # Collect results as they complete
+        completed_batches = []
+        for future in as_completed(future_to_batch):
+            batch_id = future_to_batch[future]
+            try:
+                result = future.result()
+                if result is not None:
+                    completed_batches.append((batch_id, result))
+                    logging.info(f"Batch {batch_id} completed successfully with {len(result)} examples")
+                else:
+                    logging.error(f"Batch {batch_id} failed to generate data")
+            except Exception as e:
+                logging.error(f"Batch {batch_id} generated an exception: {e}")
+    
+    # Sort batches by ID and combine results
+    completed_batches.sort(key=lambda x: x[0])
+    total_examples = 0
+    
+    for batch_id, batch_data in completed_batches:
+        all_data.extend(batch_data)
+        total_examples += len(batch_data)
     
     if not all_data:
+        logging.error("No data was generated successfully")
         return None
         
     final_dataset = Dataset(dataset=all_data)
     
-    with open("action_server_data.json", "w") as f:
+    # Generate timestamp for filename
+    timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M")
+    filename = f"action_server_data_{timestamp}.json"
+    
+    with open(filename, "w") as f:
         f.write(final_dataset.model_dump_json(indent=2))
         
-    logging.info(f"Successfully generated {total_examples} examples. Saved to action_server_data.json")
+    logging.info(f"Successfully generated {total_examples} examples across {len(completed_batches)} batches. Saved to {filename}")
     return final_dataset
 
 if __name__ == "__main__":
@@ -176,11 +234,13 @@ if __name__ == "__main__":
     parser.add_argument("--num-examples", type=int, default=20, help="Number of examples to generate")
     parser.add_argument("--batch-size", type=int, default=10, help="Batch size for generation")
     parser.add_argument("--model", type=str, default="gpt-4.1", help="Model to use for generation")
+    parser.add_argument("--max-workers", type=int, default=5, help="Maximum number of parallel workers")
     
     args = parser.parse_args()
     
     generate_action_server_data(
         num_examples=args.num_examples,
         batch_size=args.batch_size,
-        model=args.model
+        model=args.model,
+        max_workers=args.max_workers
     ) 
