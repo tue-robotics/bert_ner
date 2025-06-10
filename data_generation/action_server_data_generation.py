@@ -30,11 +30,9 @@ client = AzureOpenAI(
     api_version=os.getenv("AZURE_API_VERSION")
 )
 
-# Thread-local storage for per-thread clients
 thread_local = threading.local()
 
 def get_client():
-    """Get a thread-local Azure OpenAI client"""
     if not hasattr(thread_local, 'client'):
         thread_local.client = AzureOpenAI(
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
