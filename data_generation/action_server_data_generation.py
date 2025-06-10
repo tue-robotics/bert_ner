@@ -138,7 +138,6 @@ def generate_single_batch(batch_id: int, examples_to_generate: int, model: str) 
     
     logging.info(f"Worker generating batch {batch_id} with {examples_to_generate} examples")
     
-    # Use thread-local client
     thread_client = get_client()
     
     result = parse_with_retry(
