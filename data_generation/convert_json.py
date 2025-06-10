@@ -1,6 +1,7 @@
 import json
 import argparse
 import logging
+from pathlib import Path
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -52,6 +53,10 @@ if __name__ == "__main__":
     parser.add_argument("output_file", help="Path to the output file.")
     args = parser.parse_args()
 
+    if not Path(args.input_file).exists():
+        logger.error(f"Error: Input file '{args.input_file}' not found.")
+        exit(1)
+        
     try:
         with open(args.input_file, "r") as f:
             data = json.load(f)
