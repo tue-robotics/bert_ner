@@ -9,8 +9,30 @@ import os
 import model.modeling_bert
 import utils.data_utils
 import utils.trainer
+
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
+
+def get_device():
+    """
+    Priority: CUDA > MPS > CPU
+    """
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+        print(f"CUDA is available! Using GPU: {torch.cuda.get_device_name(0)}")
+        return device
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+        print(f"Using MPS!")
+        return device
+    else:
+        device = torch.device("cpu")
+        print("Fallback to CPU")
+        return device
+    
+
+device = get_device()
+
 # Load pre-trained BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
@@ -24,7 +46,7 @@ lines_test = Path("data/test").read_text("utf-8").strip().splitlines()
 
 
 dataset = utils.data_utils.Dataset()
-print(dataset.parse_line(lines_train[0]))
+# print(dataset.parse_line(lines_train[0]))
 
 # Parse all examples and Convert the parsed data to a DataFrame
 df_train = pd.DataFrame([dataset.parse_line(line) for line in lines_train])
@@ -53,14 +75,14 @@ slot_test = dataset.encode_token_labels(
     df_test["words"], df_test["word_labels"], tokenizer, slot_map, 45)
  
  
-# Convert numpy arrays to tensors
-input_ids_train = torch.tensor(encoded_train["input_ids"])
-attention_masks_train = torch.tensor(encoded_train["attention_masks"])
-slot_labels_train = torch.tensor(slot_train)
+# Convert arrays to tensors and move to device
+input_ids_train = encoded_train["input_ids"].clone().detach().to(device)
+attention_masks_train = encoded_train["attention_masks"].clone().detach().to(device)
+slot_labels_train = torch.tensor(slot_train).to(device)
 # Use the same process for validation and test datasets
-input_ids_valid = torch.tensor(encoded_valid["input_ids"])
-attention_masks_valid = torch.tensor(encoded_valid["attention_masks"])
-slot_labels_valid = torch.tensor(slot_valid)
+input_ids_valid = encoded_valid["input_ids"].clone().detach().to(device)
+attention_masks_valid = encoded_valid["attention_masks"].clone().detach().to(device)
+slot_labels_valid = torch.tensor(slot_valid).to(device)
 
 # Create TensorDataset
 # Use the function to create DataLoaders
@@ -80,24 +102,24 @@ for word, word_label in zip(text_sequence.split(), word_labels.split()):
 """
 
 
-print("########################################### first lines_train:")
-print(lines_train[:5])
-print("########################################### df_train:")
-print(df_train)
-print("########################################### encoded_train_input_ids:")
-print(encoded_train["input_ids"])
-print("########################################### encoded_train_attention_masks:")
-print(encoded_train["attention_masks"])
-print("########################################### slot_map:")
-print(slot_map)
-print("########################################### slot_train:")
-print(slot_train)
-print("########################################### input_ids_train:")
-print(input_ids_train)
-print("########################################### attention_masks_train:")
-print(attention_masks_train)
-print("########################################### slot_labels_train:")
-print(slot_labels_train)
+# print("########################################### first lines_train:")
+# print(lines_train[:5])
+# print("########################################### df_train:")
+# print(df_train)
+# print("########################################### encoded_train_input_ids:")
+# print(encoded_train["input_ids"])
+# print("########################################### encoded_train_attention_masks:")
+# print(encoded_train["attention_masks"])
+# print("########################################### slot_map:")
+# print(slot_map)
+# print("########################################### slot_train:")
+# print(slot_train)
+# print("########################################### input_ids_train:")
+# print(input_ids_train)
+# print("########################################### attention_masks_train:")
+# print(attention_masks_train)
+# print("########################################### slot_labels_train:")
+# print(slot_labels_train)
 
 
 
@@ -105,6 +127,7 @@ print(slot_labels_train)
 config = BertConfig.from_pretrained("bert-base-cased")
 config.return_dict = False
 model = model.modeling_bert.JointIntentAndSlotFillingModel(slot_num_labels=len(slot_map))
+model = model.to(device)  # Move model to the selected device
 optimizer = AdamW(model.parameters(), lr=3e-5)
 
 # Define loss functions for slot and intent
@@ -125,7 +148,8 @@ trainer = utils.trainer.Trainer(
     tokenizer=tokenizer,
     train_dataset=train_dataloader,
     val_dataset=val_dataloader,
-    test_dataset=None
+    test_dataset=None,
+    device=device 
 )
 
 # Train the model
