@@ -137,6 +137,10 @@ optimizer = AdamW(model.parameters(), lr=3e-5)
 slot_loss_fn = nn.CrossEntropyLoss()
 # intent_loss_fn = nn.CrossEntropyLoss()
 
+# Training configuration
+VERBOSE_TRAINING = False  # Set to False for minimal output
+USE_FP16 = False  # Set to True for mixed precision training
+
 # Define the Trainer
 trainer = utils.trainer.Trainer(
     args=None,
@@ -149,7 +153,9 @@ trainer = utils.trainer.Trainer(
     train_dataset=train_dataloader,
     val_dataset=val_dataloader,
     test_dataset=None,
-    device=device 
+    device=device,
+    use_fp16=USE_FP16,
+    verbose_training=VERBOSE_TRAINING
 )
 
 # Train the model
