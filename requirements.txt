@@ -236,7 +236,7 @@ tokenizers==0.20.1
 topic-tools==1.17.0
 torch==2.4.1
 tqdm==4.66.5
-transformers==4.46.1
+transformers==4.53.0
 triton==3.0.0
 typing-extensions==4.5.0
 tzdata==2024.2
