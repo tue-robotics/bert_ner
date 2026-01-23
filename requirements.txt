@@ -102,7 +102,7 @@ openai==1.52.0
 opt-einsum==3.4.0
 packaging==24.1
 pandas==2.0.3
-protobuf==4.25.5
+protobuf==7.34.0rc1
 psutil==6.1.0
 pyasn1==0.6.1
 pyasn1-modules==0.4.1
