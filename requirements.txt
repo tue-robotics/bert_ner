@@ -79,7 +79,7 @@ jsk-recognition-msgs==1.2.17
 keras==2.13.1
 laser-geometry==1.6.7
 libclang==18.1.1
-Markdown==3.7
+Markdown==3.8.1
 MarkupSafe==2.1.5
 message-filters==1.17.0
 mpmath==1.3.0
