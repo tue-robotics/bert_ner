@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ner_model</name>
+  <version>0.0.1</version>
+  <description>Entity Recognition model to replace CFGParser</description>
+
+  <maintainer email="panagiotisban@gmail.com">Panos</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>python3-setuptools</buildtool_depend>
+
+  <depend>rospy</depend>
+</package>
