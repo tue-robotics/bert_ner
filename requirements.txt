@@ -76,7 +76,7 @@ jiter==0.6.1
 joint-state-publisher==1.15.1
 joint-state-publisher-gui==1.15.1
 jsk-recognition-msgs==1.2.17
-keras==2.13.1
+keras==3.13.2
 laser-geometry==1.6.7
 libclang==18.1.1
 Markdown==3.8.1
