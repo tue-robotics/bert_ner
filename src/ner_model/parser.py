@@ -2,6 +2,7 @@ import rospy
 from typing import List
 from .model import load_model
 from .inference import InferenceService
+from .mapper import build_semantics
 
 
 class NERParser:
@@ -27,7 +28,9 @@ class NERParser:
         rospy.loginfo("NER input:  '%s'", sentence)
         rospy.loginfo("NER output: %s", results)
 
-        return self._hardcoded_semantics(sentence)
+        semantics = build_semantics(results)
+        rospy.loginfo("Mapped semantics: %s", semantics)
+        return semantics
 
     def parse_raw(self, target, words, debug=False):
         return self.parse(target, words)
@@ -37,12 +40,3 @@ class NERParser:
 
     def verify(self, target=None):
         pass
-
-    def _hardcoded_semantics(self, sentence):
-        return {
-            "actions": [{
-                "action": "bring",
-                "object": {"type": "coke"},
-                "target-location": {"type": "person", "id": "operator"},
-            }]
-        }
