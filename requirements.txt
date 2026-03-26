@@ -117,7 +117,7 @@ qt-gui==0.4.2
 qt-gui-cpp==0.4.2
 qt-gui-py-common==0.4.2
 regex==2024.9.11
-requests==2.32.3
+requests==2.33.0
 requests-oauthlib==2.0.0
 resource-retriever==1.12.7
 rosapi==0.11.17
