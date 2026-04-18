@@ -19,7 +19,7 @@ class NERParser:
     def fromstring(cls, grammar):
         return cls()
 
-    def parse(self, sentence: List[str]):
+    def parse(self, target, sentence):
         if isinstance(sentence, list):
             sentence = " ".join(sentence)
 

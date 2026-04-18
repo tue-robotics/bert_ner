@@ -1,3 +1,5 @@
+import re
+
 SPECIAL_TOKENS = {"[CLS]", "[SEP]", "[PAD]"}
 
 
@@ -23,6 +25,13 @@ def extract_spans(predictions):
         if token.startswith("##"):
             if current_tokens:
                 current_tokens[-1] += token[2:]
+            continue
+
+        # Bridge underscores inside a multi-token entity span.
+        # BERT tokenizers split "kitchen_cabinet" into "kitchen", "_", "cabinet".
+        # If we're mid-span and see an "O"-tagged "_", treat it as part of the span.
+        if slot == "O" and token == "_" and current_label is not None:
+            current_tokens.append(token)
             continue
 
         if slot == "O":
@@ -51,10 +60,14 @@ def extract_spans(predictions):
 
 def normalize_entity(text):
     """
-    Basic normalization: lowercase, replace spaces with underscores.
-    e.g. "living room" -> "living_room", "Dinner Table" -> "dinner_table"
+    Lowercase, collapse whitespace around underscores, and replace spaces with underscores.
+    e.g. "living room" -> "living_room"
+         "Dinner Table" -> "dinner_table"
+         "kitchen _ cabinet" -> "kitchen_cabinet"
     """
-    return text.lower().strip().replace(" ", "_")
+    text = text.lower().strip()
+    text = re.sub(r"\s*_\s*", "_", text)
+    return text.replace(" ", "_")
 
 
 ENTITY_SLOT_TO_KEY = {
