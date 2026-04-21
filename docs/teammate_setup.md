@@ -44,14 +44,28 @@ done
 
 ### 2a. NER model weights — must be obtained separately
 
-| File         | Path                          | Size   | Tracked in git?                 | How to get it                                                            |
-| ------------ | ----------------------------- | ------ | ------------------------------- | ------------------------------------------------------------------------ |
-| `model.pth`  | `ner_model/data/model.pth`    | 433 MB | **No** — ignored via `*.pth`    | Ask the maintainer (Drive / MEGA / scp), or retrain via `speech-api`     |
-| `vocab.slot` | `ner_model/data/vocab.slot`   | < 1 KB | **Yes**                         | Comes with the repo                                                      |
+| File         | Path                          | Size   | Tracked in git?                 | How to get it                                                                                                           |
+| ------------ | ----------------------------- | ------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `model.pth`  | `ner_model/data/model.pth`    | 433 MB | **No** — ignored via `*.pth`    | Download from Hugging Face: [PanosHuggingFace/bert-ner/model.pth](https://huggingface.co/PanosHuggingFace/bert-ner/resolve/main/model.pth) |
+| `vocab.slot` | `ner_model/data/vocab.slot`   | < 1 KB | **Yes**                         | Comes with the repo                                                                                                     |
 
-> **Action item**: agree on a distribution channel — Git LFS on the `ner_model`
-> repo, or a MEGA share that maps to `~/MEGA/data/ner_model/model.pth` with a
-> `tue-env` install target. Until then, manual transfer is the only option.
+Quick download (pick one):
+
+```bash
+cd /home/amigo/ros/noetic/repos/github.com/tue-robotics/ner_model/data
+
+# with wget
+wget -O model.pth https://huggingface.co/PanosHuggingFace/bert-ner/resolve/main/model.pth
+
+# or with curl
+curl -L -o model.pth https://huggingface.co/PanosHuggingFace/bert-ner/resolve/main/model.pth
+```
+
+Verify the download (expected ≈ 413 MiB / 433,429,702 bytes):
+
+```bash
+ls -lh data/model.pth
+```
 
 ### 2b. YOLO + SAM ONNX weights — required for object classification
 
@@ -156,18 +170,27 @@ python3 -c "from ner_model.parser import NERParser; print('ok')"
 Reference sequence (assumes `ROBOT_ENV=impuls`, `ROBOT=hero`):
 
 ```bash
-# Terminal 1 — full robot stack in sim (Gazebo + nav + world model + action_server)
-roslaunch hero_bringup free_mode.launch
+# Terminal 1 — start the simulator (Gazebo + core robot stack)
+hero-start
 
-# Terminal 2 — kill the random answerer so it doesn't intercept HMI goals
-rosnode kill /hero/hmi/random_answerer
+# Terminal 2 — free mode (navigation + world model + action server)
+hero-free-mode
 
-# Terminal 3 — GPSR challenge
+# Terminal 3 — (optional) RViz for visualisation
+hero-rviz
+
+# Terminal 4 — GPSR challenge, then immediately kill the random answerer
+#              so it doesn't intercept HMI goals
 rosrun challenge_gpsr gpsr.py _robot_name:=hero _test_mode:=true _skip:=true
+rosnode kill /hero/hmi/random_answerer
+```
 
-# Terminal 4 — auto-responder (handles the "hero" wake word + sends the command)
-python /home/amigo/ros/noetic/repos/github.com/tue-robotics/ner_model/tools/gpsr_auto_responder.py \
-    "get the coke from the dinner table"
+Once GPSR prompts *"state your command"*, send a sentence directly on the
+HMI string topic from any terminal:
+
+```bash
+rostopic pub /hero/hmi/string std_msgs/String \
+    "data: 'get the coke from the dining table'" --once
 ```
 
 ---
@@ -197,12 +220,13 @@ python /home/amigo/ros/noetic/repos/github.com/tue-robotics/ner_model/tools/gpsr
 
 - [ ] Cloned all six `tue-robotics/*` repos
 - [ ] Ran the branch-switch one-liner from section 1
-- [ ] Dropped `model.pth` into `ner_model/data/`
+- [ ] Downloaded `model.pth` from [Hugging Face](https://huggingface.co/PanosHuggingFace/bert-ner/resolve/main/model.pth) into `ner_model/data/`
 - [ ] YOLO+SAM `.onnx` files are present under `$TUE_ENV_WS_DIR/build/{yolo,sam}_onnx_ros/resources/...`
 - [ ] `pip install torch==2.3.1 transformers==4.46.3` in **both** the ros-noetic venv and system python
 - [ ] `sudo ln -s /usr/local/cuda/lib64/libcudart.so /usr/lib/x86_64-linux-gnu/libcudart.so` (if needed)
 - [ ] `ln -s .../repos/.../ner_model /home/$USER/ros/noetic/system/src/ner_model`
 - [ ] `tue-make` completes without errors
 - [ ] Sanity imports from section 5 succeed
-- [ ] `roslaunch hero_bringup free_mode.launch` brings up Gazebo + Rviz cleanly
-- [ ] Running GPSR with the auto-responder executes `get the coke from the dinner table` end-to-end
+- [ ] `hero-start` + `hero-free-mode` (+ optional `hero-rviz`) bring up the stack cleanly
+- [ ] `rosrun challenge_gpsr gpsr.py ...` reaches the "state your command" prompt
+- [ ] `rostopic pub /hero/hmi/string ...` executes `get the coke from the dining table` end-to-end
