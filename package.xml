@@ -12,4 +12,7 @@
 
   <depend>rospy</depend>
   <exec_depend>robocup_knowledge</exec_depend>
+  <exec_depend>python3-pytorch-pip</exec_depend>
+  <exec_depend>python3-transformers-pip</exec_depend>
+  <exec_depend>python3-sentence-transformers-pip</exec_depend>
 </package>
