@@ -5,8 +5,25 @@ BERT-based NER model for slot filling, integrated as a catkin package to replace
 ## Prerequisites
 
 - ROS Noetic workspace with `hmi`, `action_server`, and `tue_robocup` packages
-- Python dependencies: `torch`, `transformers`
-- Model files: `data/model.pth` and `data/vocab.slot` (not tracked in git, must be obtained separately)
+- Python dependencies: `torch`, `transformers`, `sentence-transformers`
+- Model weights: `model.pth` (~433 MB). `vocab.slot` ships with the source; the
+  weights do not and must be installed manually, see
+  [docs/teammate_setup.md](docs/teammate_setup.md).
+
+### Where the weights are looked up
+
+Nothing is downloaded automatically. `model.pth` is searched for in this order,
+so it can live outside the repository:
+
+1. the `ner_model/model_path` ROS parameter, or the `model_path` argument of
+   `load_model()` — either the file itself or a directory containing it
+2. the `NER_MODEL_DATA_DIR` environment variable
+3. `~/data/ner_model/`
+4. `data/` inside this package
+
+Each file is resolved independently, so keeping the weights in `~/data/ner_model/`
+while `vocab.slot` stays in the package works. If the weights are missing, the
+error names every location that was searched.
 
 ## Build
 

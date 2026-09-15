@@ -14,7 +14,14 @@ class NERParser:
     def __init__(self):
         if NERParser._service is None:
             rospy.loginfo("Loading NER model")
-            model, tokenizer, device = load_model()
+            model_path = rospy.get_param("ner_model/model_path", None)
+            try:
+                model, tokenizer, device = load_model(model_path=model_path)
+            except FileNotFoundError as exc:
+                # The weights are installed by the user, so make the cause
+                # obvious instead of surfacing as a generic parse failure.
+                rospy.logerr("NER model unavailable: %s", exc)
+                raise
             NERParser._service = InferenceService(model, tokenizer, device)
             rospy.loginfo("NER model ready")
 
