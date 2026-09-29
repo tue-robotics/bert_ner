@@ -1,17 +1,8 @@
 # GPSR test commands — `ROBOT_ENV=impuls`
 
-Copy-paste commands for manual GPSR + entity-linker testing.  
-Requires: GPSR running, `ROBOT_ENV=impuls`, linker enabled (`sentence-transformers` in venv).
+Below you can find a few commands that can be used for testing the NER+Linker configuration. The commands range from simple -> ambiguous(similar object/location names)
 
-**Watch logs for:**
-```
-Entity linker: linked '...' -> '...' (score=...)
-Entity mapper: built semantics ...
-```
-
----
-
-## Commands (copy-paste)
+## Commands 
 
 1. Bring me a coke from the dining table
 2. Pick up the fanta from the dining room
@@ -101,23 +92,4 @@ Entity mapper: built semantics ...
 Currently: **coke**, **apple** only.  
 Commands involving sponge, fanta, mentos, etc. may pass language grounding but fail at Find if not spawned/perceived.
 
----
 
-## Suggested test order
-
-**Easy (sim-friendly):** 1, 8  
-**Linker stress:** 3, 4, 10  
-**Multi-action:** 6, 7, 8  
-**Ambiguous:** 2, 5
-
----
-
-## Pass / fail checklist
-
-- [ ] `Entity linker: ready` on first command (cold start ~2s)
-- [ ] No `failed to initialize: sentence-transformers`
-- [ ] `Entity linker: linked` or `exact match` for each mention
-- [ ] Score > 0.60 (or sensible exact match)
-- [ ] `Entity mapper: built semantics` looks correct
-- [ ] Action server does not ask for missing `actions[0].object`
-- [ ] Task succeeds or fails only on sim/perception (not language)
