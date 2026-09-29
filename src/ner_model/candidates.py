@@ -32,15 +32,19 @@ def _candidate_text(entity_id: str, description: str = "") -> str:
 
 def candidates_from_common(common) -> List[EntityCandidate]:
     """Build linker candidates from robocup_knowledge common module."""
+    # name -> category / room lookups; setdefault keeps the first entry per name
+    categories = {}
+    for obj in getattr(common, "objects", []):
+        categories.setdefault(obj.get("name"), obj.get("category", ""))
+
+    rooms = {}
+    for loc in getattr(common, "locations", []):
+        rooms.setdefault(loc["name"], loc.get("room", ""))
+
     candidates = []
 
     for name in getattr(common, "object_names", []):
-        category = ""
-        for obj in getattr(common, "objects", []):
-            if obj.get("name") == name:
-                category = obj.get("category", "")
-                break
-        description = category.replace("_", " ") if category else ""
+        description = (categories.get(name) or "").replace("_", " ")
         candidates.append(
             EntityCandidate(
                 entity_id=name,
@@ -50,19 +54,11 @@ def candidates_from_common(common) -> List[EntityCandidate]:
         )
 
     location_ids = set(getattr(common, "location_names", []))
-    for room in getattr(common, "location_rooms", []):
-        location_ids.add(room)
-
-    for loc in getattr(common, "locations", []):
-        location_ids.add(loc["name"])
+    location_ids.update(getattr(common, "location_rooms", []))
+    location_ids.update(rooms)
 
     for name in sorted(location_ids):
-        room = ""
-        for loc in getattr(common, "locations", []):
-            if loc.get("name") == name:
-                room = loc.get("room", "")
-                break
-        description = room.replace("_", " ") if room else ""
+        description = (rooms.get(name) or "").replace("_", " ")
         candidates.append(
             EntityCandidate(
                 entity_id=name,
