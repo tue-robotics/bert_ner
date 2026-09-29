@@ -4,11 +4,12 @@ __pycache__/
 *$py.class
 
 # Data
+*.pth
+*.pkl
 test
 train
 valid
 vocab.intent
-vocab.slot
 
 # C extensions
 *.so
