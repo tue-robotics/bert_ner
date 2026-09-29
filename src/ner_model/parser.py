@@ -8,6 +8,14 @@ from .linker import BiEncoderLinker
 
 
 class NERParser:
+    """
+    Drop-in replacement for grammar_parser's CFGParser, backed by the NER model.
+
+    Keeps the CFGParser interface (fromstring, parse, parse_raw, ...) so hmi and
+    conversation_engine can switch parsers without further changes. 
+    The model and entity linker are loaded once and shared by all instances!
+    """
+
     _service = None
     _linker = None
 
@@ -18,8 +26,6 @@ class NERParser:
             try:
                 model, tokenizer, device = load_model(model_path=model_path)
             except FileNotFoundError as exc:
-                # The weights are installed by the user, so make the cause
-                # obvious instead of surfacing as a generic parse failure.
                 rospy.logerr("NER model unavailable: %s", exc)
                 raise
             NERParser._service = InferenceService(model, tokenizer, device)
@@ -60,7 +66,9 @@ class NERParser:
             )
             return linker
         except Exception as exc:
-            rospy.logwarn("Entity linker: failed to initialize: %s", exc)
+            rospy.logwarn(
+                "Entity linker: failed to initialize: %s: %s", type(exc).__name__, exc
+            )
             return None
 
     @classmethod
@@ -68,11 +76,39 @@ class NERParser:
         return cls()
 
     def parse(self, target, sentence):
+        """
+        Turns a spoken command into the semantics dict for the action server.
+
+        1. The NER model tags every token with a slot (an action such as
+           "navigate-to", or an entity such as Object / Location / Person).
+        2. build_semantics groups the tagged spans into actions, attaching each
+           entity to the action before it. Then,using the linker,
+           each mention is mapped to a known world-model id
+           (e.g. "dinner table" -> "dinner_table").
+
+        e.g. "go to the kitchen and grab a coke" ->
+            {"actions": [{"action": "navigate-to", "target-location": {"id": "kitchen"}},
+                         {"action": "pick-up", "object": {"type": "coke"}}]}
+
+        :param target: unused, kept for CFGParser compatibility
+        :param sentence: the command, as a string or a list of words
+        :return: {"actions": [...]}; {"actions": [{"action": "unknown"}]} if
+            no action was recognized
+        """
         if isinstance(sentence, list):
             sentence = " ".join(sentence)
 
         rospy.loginfo("NER input: '%s'", sentence)
-        results = NERParser._service.predict(sentence)
+        try:
+            results = NERParser._service.predict(sentence)
+        except Exception as exc:
+            rospy.logerr(
+                "NER model inference failed on '%s': %s: %s",
+                sentence,
+                type(exc).__name__,
+                exc,
+            )
+            raise
         rospy.loginfo("NER output: %s", results)
 
         semantics = build_semantics(results, linker=NERParser._linker)

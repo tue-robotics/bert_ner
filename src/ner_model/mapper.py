@@ -110,7 +110,20 @@ def _resolve_entity_id(
         )
         return canonical_id
 
-    result = linker.link(slot_label, mention_text)
+    try:
+        result = linker.link(slot_label, mention_text)
+    except Exception as exc:
+        # Linking is an enhancement; a failure should degrade to plain
+        # normalization rather than lose the whole command.
+        rospy.logwarn(
+            "Entity mapper: linker raised on '%s' (%s): %s: %s",
+            mention_text,
+            slot_label,
+            type(exc).__name__,
+            exc,
+        )
+        result = None
+
     if result is not None:
         return result.entity_id
 
