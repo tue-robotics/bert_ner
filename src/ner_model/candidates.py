@@ -32,51 +32,34 @@ def _candidate_text(entity_id: str, description: str = "") -> str:
 
 def candidates_from_common(common) -> List[EntityCandidate]:
     """Build linker candidates from robocup_knowledge common module."""
-    # name -> category / room lookups; setdefault keeps the first entry per name
-    categories = {}
-    for obj in getattr(common, "objects", []):
-        categories.setdefault(obj.get("name"), obj.get("category", ""))
+    # name -> description lookups; reversed() so the first entry per name wins
+    categories = {
+        obj.get("name"): obj.get("category", "")
+        for obj in reversed(getattr(common, "objects", []))
+    }
+    rooms = {
+        loc["name"]: loc.get("room", "")
+        for loc in reversed(getattr(common, "locations", []))
+    }
+    location_ids = set().union(
+        getattr(common, "location_names", []), getattr(common, "location_rooms", []), rooms
+    )
 
-    rooms = {}
-    for loc in getattr(common, "locations", []):
-        rooms.setdefault(loc["name"], loc.get("room", ""))
+    sources = [
+        ("Object", getattr(common, "object_names", []), categories),
+        ("Location", sorted(location_ids), rooms),
+        ("Person", getattr(common, "names", []), {}),
+    ]
 
-    candidates = []
-
-    for name in getattr(common, "object_names", []):
-        description = (categories.get(name) or "").replace("_", " ")
-        candidates.append(
-            EntityCandidate(
-                entity_id=name,
-                label="Object",
-                text=_candidate_text(name, description),
-            )
+    return [
+        EntityCandidate(
+            entity_id=name,
+            label=label,
+            text=_candidate_text(name, (descriptions.get(name) or "").replace("_", " ")),
         )
-
-    location_ids = set(getattr(common, "location_names", []))
-    location_ids.update(getattr(common, "location_rooms", []))
-    location_ids.update(rooms)
-
-    for name in sorted(location_ids):
-        description = (rooms.get(name) or "").replace("_", " ")
-        candidates.append(
-            EntityCandidate(
-                entity_id=name,
-                label="Location",
-                text=_candidate_text(name, description),
-            )
-        )
-
-    for name in getattr(common, "names", []):
-        candidates.append(
-            EntityCandidate(
-                entity_id=name,
-                label="Person",
-                text=name,
-            )
-        )
-
-    return candidates
+        for label, names, descriptions in sources
+        for name in names
+    ]
 
 
 def load_candidates() -> List[EntityCandidate]:
