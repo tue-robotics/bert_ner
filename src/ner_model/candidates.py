@@ -7,6 +7,23 @@ from .linker import EntityCandidate
 
 
 def _candidate_text(entity_id: str, description: str = "") -> str:
+    """
+    Candidates are the entities the robot knows about in the current environment:
+    the objects, locations and person names in robocup_knowledge for ROBOT_ENV.
+
+    The entity linker matches each mention the NER model extracts (e.g. "dining
+    table") to the closest candidate, so the action server gets an id that exists
+    in the world model (e.g. "dinner_table"). Each candidate is an EntityCandidate:
+
+    - entity_id: the world-model id, e.g. "dinner_table"
+    - label: Object, Location or Person; mentions are only compared to candidates
+    with the same label
+    - text: what the linker compares mentions against, e.g. "dinner table, dining room"
+    
+    Build a candidate's text: the id in plain words, plus its context if any.
+
+    e.g. ("dinner_table", "dining room") -> "dinner table, dining room"
+    """
     text = entity_id.replace("_", " ")
     if description:
         return "{}, {}".format(text, description)
