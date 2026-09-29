@@ -1,7 +1,7 @@
 import logging
 import torch
 import torch.nn.functional as F
-from .model import JointIntentAndSlotFillingModel
+from .ner_model import JointIntentAndSlotFillingModel
 
 logger = logging.getLogger(__name__)
 

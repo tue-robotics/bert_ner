@@ -36,15 +36,8 @@ def data_dir_candidates():
 
 def find_data_file(filename, explicit_path=None):
     """
-    Locate a model data file, preferring an explicitly configured location.
-
-    Precedence: `explicit_path`, then ``$NER_MODEL_DATA_DIR``, then
-    ``~/data/ner_model``, then the data directory shipped with the package.
-
-    :param filename: name of the file to look for, e.g. ``model.pth``
-    :param explicit_path: a file, or a directory expected to contain `filename`
-    :return: (Path) path to the existing file
-    :raises FileNotFoundError: with the searched locations and a download hint
+    Return the path to `filename`, taken from `explicit_path` (a file or a
+    directory) if given, else from the first of data_dir_candidates() that has it.
     """
     if explicit_path:
         path = Path(explicit_path).expanduser()
