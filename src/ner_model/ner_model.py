@@ -36,8 +36,7 @@ def data_dir_candidates():
 
 def find_data_file(filename, explicit_path=None):
     """
-    Return the path to `filename`, taken from `explicit_path` (a file or a
-    directory) if given, else from the first of data_dir_candidates() that has it.
+    Helper util function for loading NER related files
     """
     if explicit_path:
         path = Path(explicit_path).expanduser()
