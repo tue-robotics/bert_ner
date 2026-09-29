@@ -1,6 +1,6 @@
 import rospy
 
-from .model import load_model
+from .ner_model import load_model
 from .inference import InferenceService
 from .mapper import build_semantics
 from .candidates import load_candidates
