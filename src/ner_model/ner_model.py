@@ -101,7 +101,7 @@ def get_device():
 
 def load_model(model_path=None, base_model_name="bert-base-cased"):
     """
-    Load the slot tagging model and its tokenizer.
+    Load the NER model and its tokenizer.
 
     :param model_path: optional path to the weights, either the file itself or a
         directory containing `model.pth`. When omitted, the locations described
@@ -112,8 +112,6 @@ def load_model(model_path=None, base_model_name="bert-base-cased"):
     """
     device = get_device()
 
-    # Resolve the weights before building the model, so a missing file fails
-    # immediately instead of after fetching the pretrained transformer.
     weights_path = find_data_file(MODEL_FILENAME, explicit_path=model_path)
 
     tokenizer = AutoTokenizer.from_pretrained(base_model_name)
