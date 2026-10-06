@@ -1,0 +1,4 @@
+drive:B-Action-navigate-to to:I-Action-navigate-to the:O dining:B-Location room:I-Location <=> navigate-to
+take:B-Action-pick-up the:O banana:B-Object from:O the:O kitchen:B-SourceLocation cabinet:I-SourceLocation <=> pick-up
+hand:B-Action-hand-over the:O cup:B-Object to:O mary:B-Person <=> hand-over
+follow:B-Action-follow mary:B-Person <=> follow

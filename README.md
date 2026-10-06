@@ -32,6 +32,10 @@ ln -s /home/amigo/ros/noetic/repos/github.com/tue-robotics/ner_model/ /home/amig
 tue-make ner_model
 ```
 
+## Training
+
+To train a new `model.pth`, see [docs/training.md](docs/training.md).
+
 ## Test with GPSR challenge (full robot stack)
 
 Terminal 1 — start the robot simulator:
