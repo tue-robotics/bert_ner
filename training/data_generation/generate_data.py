@@ -13,7 +13,7 @@ from openai import BadRequestError, APITimeoutError, RateLimitError
 from pydantic import BaseModel
 from dotenv import find_dotenv, load_dotenv
 
-from action_server_constants import action_server_prompt
+from prompt import action_server_prompt
 
 logging.basicConfig(
     level=logging.INFO,

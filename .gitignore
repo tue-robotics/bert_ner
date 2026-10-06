@@ -4,11 +4,19 @@ __pycache__/
 *$py.class
 
 # Data
+*.pth
+*.pkl
 test
 train
 valid
 vocab.intent
-vocab.slot
+# Generated training data (see docs/training.md)
+data/train.txt
+data/valid.txt
+data/test.txt
+training/data_generation/train_*.json
+training/data_generation/dev_*.json
+training/data_generation/test_*.json
 
 # C extensions
 *.so

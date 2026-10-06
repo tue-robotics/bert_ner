@@ -47,7 +47,7 @@ class Trainer(object):
         else:
             self.scaler = None
                 
-    def train(self):
+    def train(self, save_path="model.pth"):
         """
         Train the model with optional detailed monitoring
         """
@@ -180,11 +180,11 @@ class Trainer(object):
             print("\n" + "="*60)
             print(f"Training completed in {time.strftime('%H:%M:%S', time.gmtime(total_time))}")
             print(f"Final Loss: {training_history[-1]['loss']:.4f}")
-            print(f"Saving model to 'model.pth'...")
+            print(f"Saving model to '{save_path}'...")
         else:
             print("Training completed. Saving model...")
         
-        torch.save(self.model.state_dict(), "model.pth")
+        torch.save(self.model.state_dict(), save_path)
         
         if self.verbose_training:
             print("Model saved successfully!")

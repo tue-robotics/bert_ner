@@ -1,0 +1,13 @@
+go:B-Action-navigate-to to:I-Action-navigate-to the:O kitchen:B-Location <=> navigate-to
+navigate:B-Action-navigate-to to:I-Action-navigate-to the:O living:B-Location room:I-Location <=> navigate-to
+pick:B-Action-pick-up up:I-Action-pick-up the:O coke:B-Object from:O the:O dinner:B-SourceLocation table:I-SourceLocation <=> pick-up
+grab:B-Action-pick-up the:O apple:B-Object from:O the:O kitchen:B-SourceLocation cabinet:I-SourceLocation <=> pick-up
+put:B-Action-place the:O cup:B-Object on:O the:O dinner:B-TargetLocation table:I-TargetLocation <=> place
+bring:B-Action-hand-over me:B-Person the:O banana:B-Object <=> hand-over
+give:B-Action-hand-over the:O coke:B-Object to:O john:B-Person <=> hand-over
+find:B-Action-find a:O cup:B-Object in:O the:O office:B-Area <=> find
+follow:B-Action-follow john:B-Person <=> follow
+guide:B-Action-guide mary:B-Person to:O the:O kitchen:B-TargetLocation <=> guide
+look:B-Action-look-at at:I-Action-look-at the:O dinner:B-Location table:I-Location <=> look-at
+answer:B-Action-answer-question a:I-Action-answer-question question:I-Action-answer-question <=> answer-question
+go:B-Action-navigate-to to:I-Action-navigate-to the:O kitchen:B-Location and:O pick:B-Action-pick-up up:I-Action-pick-up the:O apple:B-Object <=> navigate-to
